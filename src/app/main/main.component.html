@@ -1,0 +1,13 @@
+<div>
+  <app-input />
+
+  <hr />
+  <h1>contacts:</h1>
+  <app-grid gridTemplateColumns="1fr 1fr" gap="20px">
+    <app-output
+      *ngFor="let contact of contactsService.getItems(); let i = index"
+      [contact]="contact"
+      [index]="i"
+    />
+  </app-grid>
+</div>

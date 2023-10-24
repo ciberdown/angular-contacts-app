@@ -1,0 +1,7 @@
+<input type="text" placeholder="name" [(ngModel)]="name" />
+<input type="number" placeholder="age" [(ngModel)]="age" />
+
+<button (click)="submitHandler()">Submit</button>
+
+<h2 *ngIf="alertSubmitService.allowAlert && name === ''">add name!</h2>
+<h2 *ngIf="alertSubmitService.allowAlert && age === null">add age!</h2>
