@@ -11,6 +11,7 @@ import { FlexboxComponent } from './customComponents/flexbox/flexbox.component';
 import { GridComponent } from './customComponents/grid/grid.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { InfoComponent } from './info/info.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
     path: 'contacts',
     component: MainComponent,
   },
+  { path: 'info', component: InfoComponent },
 ];
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
     GridComponent,
     HomeComponent,
     NavigationComponent,
+    InfoComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
   providers: [],

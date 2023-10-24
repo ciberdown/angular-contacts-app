@@ -11,15 +11,17 @@ button {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
   font-size: 20px;
+  &:hover {
+    transform: translate(-1px, -1px);
+  }
 }
 
 .active {
   border-top: $border-color 3px solid;
   border-left: $border-color 3px solid;
   border-right: $border-color 3px solid;
-  border-bottom: 2px solid $active-color;
-}
-
-.not-active {
-  border-bottom: $border-color 2px solid;
+  border-bottom: 1px solid $active-color;
+  &:hover {
+    transform: translate(0, 00);
+  }
 }
