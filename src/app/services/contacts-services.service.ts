@@ -7,10 +7,10 @@ import { MyTestServiceService } from './my-test-service.service';
 export class ContactsService {
   private contacts: ContactInterface[] = [
     {
-      name: 'Amin',
-      age: 22,
+      name: 'Jane',
+      age: 34,
       type: 'human',
-      status: 'active',
+      status: 'online',
     },
   ];
   statusChanged = new EventEmitter<string>();
