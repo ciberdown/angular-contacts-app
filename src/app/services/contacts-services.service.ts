@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { MyTestServiceService } from './my-test-service.service';
 
 @Injectable({
@@ -10,8 +10,10 @@ export class ContactsService {
       name: 'Amin',
       age: 22,
       type: 'human',
+      status: 'active',
     },
   ];
+  statusChanged = new EventEmitter<string>();
 
   constructor(private testService: MyTestServiceService) {}
   addItem(item: ContactInterface) {
@@ -29,4 +31,5 @@ export interface ContactInterface {
   name: string;
   age: number;
   type?: string;
+  status: 'active' | 'notActive' | 'online';
 }

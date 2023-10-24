@@ -1,3 +1,10 @@
-<div [ngStyle]="{ 'justify-content': justifyContent,'align-items':alignItems }">
+<div
+  [ngStyle]="{
+    'justify-content': justifyContent,
+    'align-items': alignItems,
+    gap: gap,
+    'flex-direction': flexDirection
+  }"
+>
   <ng-content></ng-content>
 </div>

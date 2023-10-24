@@ -8,4 +8,6 @@ import { Component, Input } from '@angular/core';
 export class FlexboxComponent {
   @Input() justifyContent: string = 'space-between';
   @Input() alignItems: string = 'center';
+  @Input() gap: string = '0px';
+  @Input() flexDirection: string = 'row';
 }

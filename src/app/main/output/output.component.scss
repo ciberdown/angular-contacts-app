@@ -3,3 +3,20 @@ div {
   border-radius: 10px;
   padding: 10px;
 }
+button {
+  cursor: pointer;
+}
+.circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.online {
+  background-color: green;
+}
+.active {
+  background-color: purple;
+}
+.notActive {
+  background-color: red;
+}

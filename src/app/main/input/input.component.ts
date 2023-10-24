@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { AlertServiceService } from 'src/app/services/alert-service.service';
 import {
   ContactInterface,
@@ -18,14 +18,20 @@ export class InputComponent {
     private contactsSerive: ContactsService,
     public alertSubmitService: AlertServiceService,
   ) {}
-  addContact(contact: ContactInterface = { name: 'John', age: 42 }) {
+
+  addContact(contact: ContactInterface) {
     this.contactsSerive.addItem(contact);
   }
+
   submitHandler() {
     if (this.age === null || this.name === '') {
       this.alertSubmitService.alert();
     } else {
-      this.addContact({ name: this.name, age: this.age as number });
+      this.addContact({
+        name: this.name,
+        age: this.age as number,
+        status: 'online',
+      });
       this.name = '';
       this.age = null;
     }

@@ -2,12 +2,15 @@
   <app-input />
 
   <hr />
-  <h1>contacts:</h1>
-  <app-grid gridTemplateColumns="1fr 1fr" gap="20px">
-    <app-output
-      *ngFor="let contact of contactsService.getItems(); let i = index"
-      [contact]="contact"
-      [index]="i"
-    />
-  </app-grid>
+  <h3 *ngIf="contactsService.getItems().length === 0">no contact was found!</h3>
+  <div *ngIf="contactsService.getItems().length !== 0">
+    <h1>contacts:</h1>
+    <app-grid gridTemplateColumns="1fr 1fr" gap="20px">
+      <app-output
+        *ngFor="let contact of contactsService.getItems(); let i = index"
+        [contact]="contact"
+        [index]="i"
+      />
+    </app-grid>
+  </div>
 </div>

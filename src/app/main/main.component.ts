@@ -10,5 +10,9 @@ import {
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
-  constructor(public contactsService: ContactsService) {}
+  constructor(public contactsService: ContactsService) {
+    this.contactsService.statusChanged.subscribe((data) => {
+      console.log(data);
+    });
+  }
 }

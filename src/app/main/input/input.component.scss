@@ -8,7 +8,14 @@ input {
 button {
   border-radius: 5px;
   padding: 5px;
+  cursor: pointer;
 }
 h2 {
   color: red;
+}
+app-flexbox {
+  cursor: pointer;
+  input {
+    cursor: pointer;
+  }
 }
