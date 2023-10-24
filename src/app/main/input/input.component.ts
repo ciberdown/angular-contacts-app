@@ -20,7 +20,6 @@ export class InputComponent {
   ) {}
   addContact(contact: ContactInterface = { name: 'John', age: 42 }) {
     this.contactsSerive.addItem(contact);
-    console.log(this.contactsSerive.getItems());
   }
   submitHandler() {
     if (this.age === null || this.name === '') {
@@ -30,11 +29,5 @@ export class InputComponent {
       this.name = '';
       this.age = null;
     }
-  }
-  nameInputHandler(e: any) {
-    this.name = e.target.value;
-  }
-  ageInputHandler(e: any) {
-    this.age = e.target.value as number;
   }
 }
