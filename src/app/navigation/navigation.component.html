@@ -1,0 +1,18 @@
+<div>
+  <button
+    [ngClass]="{ active: routingIndex === 0, 'not-active': routingIndex !== 0 }"
+    routerLink="/"
+    (click)="handleroutingIndex(0)"
+  >
+    Home
+  </button>
+  <button
+    [ngClass]="{ active: routingIndex === 1, 'not-active': routingIndex !== 1 }"
+    routerLink="/contacts"
+    (click)="handleroutingIndex(1)"
+  >
+    Contacts
+  </button>
+  <hr />
+  <router-outlet></router-outlet>
+</div>
