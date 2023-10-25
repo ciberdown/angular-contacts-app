@@ -26,6 +26,9 @@ export class ContactsService {
   getItems(): ContactInterface[] {
     return this.contacts;
   }
+  getItem(index: number): ContactInterface {
+    return this.contacts[index];
+  }
 }
 export interface ContactInterface {
   name: string;

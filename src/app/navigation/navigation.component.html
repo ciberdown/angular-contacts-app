@@ -1,22 +1,20 @@
 <div>
   <button
-    [ngClass]="{ active: routingIndex === 0 }"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLinkActive="active"
     routerLink="/"
-    (click)="handleroutingIndex(0)"
   >
     Home
   </button>
   <button
-    [ngClass]="{ active: routingIndex === 1 }"
+    routerLinkActive="active"
     routerLink="/contacts"
-    (click)="handleroutingIndex(1)"
   >
     Contacts
   </button>
   <button
-    [ngClass]="{ active: routingIndex === 2 }"
+    routerLinkActive="active"
     routerLink="/info"
-    (click)="handleroutingIndex(2)"
   >
     info
   </button>

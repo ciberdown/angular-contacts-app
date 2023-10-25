@@ -1,8 +1,15 @@
-<div>
-  <button (click)="removeContact()">remove</button>
+<div
+  [ngClass]="{ pointer: !hasPathIndex() }"
+  class="contact"
+  (click)="clickContactHandle()"
+>
+  <app-flexbox>
+    <button *ngIf="hasPathIndex()" (click)="backHandle()">back</button>
+    <button *ngIf="!hasPathIndex()" (click)="removeContact()">remove</button>
+  </app-flexbox>
   <app-flexbox>
     <app-flexbox>
-      <h2>{{ index + 1 }}:</h2>
+      <h2>{{ index }}:</h2>
       <h2>{{ contact.name }}</h2>
     </app-flexbox>
     <app-flexbox flexDirection="column">

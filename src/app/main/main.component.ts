@@ -11,6 +11,9 @@ import {
 })
 export class MainComponent {
   constructor(public contactsService: ContactsService) {
+    this.onStatusChanged();
+  }
+  onStatusChanged() {
     this.contactsService.statusChanged.subscribe((data) => {
       console.log(data);
     });

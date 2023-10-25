@@ -20,6 +20,7 @@ const appRoutes: Routes = [
     component: MainComponent,
   },
   { path: 'info', component: InfoComponent },
+  { path: 'contacts/:index', component: OutputComponent },
 ];
 @NgModule({
   declarations: [

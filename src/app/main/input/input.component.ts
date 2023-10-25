@@ -1,4 +1,5 @@
 import { Component, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertServiceService } from 'src/app/services/alert-service.service';
 import {
   ContactInterface,
@@ -17,10 +18,15 @@ export class InputComponent {
   constructor(
     private contactsSerive: ContactsService,
     public alertSubmitService: AlertServiceService,
+    private router: Router,
   ) {}
 
   addContact(contact: ContactInterface) {
     this.contactsSerive.addItem(contact);
+  }
+
+  navigateToHomePage() {
+    this.router.navigate(['/']);
   }
 
   submitHandler() {

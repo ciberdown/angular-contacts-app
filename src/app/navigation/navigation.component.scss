@@ -12,7 +12,8 @@ button {
   font-weight: bold;
   font-size: 20px;
   &:hover {
-    transform: translate(-1px, -1px);
+    transform: translate(-2px, -2px);
+    border-bottom: 2px solid $active-color;
   }
 }
 

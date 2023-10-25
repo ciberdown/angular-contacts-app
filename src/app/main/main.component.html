@@ -8,8 +8,8 @@
     <app-grid gridTemplateColumns="1fr 1fr" gap="20px">
       <app-output
         *ngFor="let contact of contactsService.getItems(); let i = index"
-        [contact]="contact"
         [index]="i"
+        [contact]="contact"
       />
     </app-grid>
   </div>

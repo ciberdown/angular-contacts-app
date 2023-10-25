@@ -5,10 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss'],
 })
-export class NavigationComponent {
-  routingIndex: number = 0;
-
-  handleroutingIndex(num: number) {
-    this.routingIndex = num;
-  }
-}
+export class NavigationComponent {}
