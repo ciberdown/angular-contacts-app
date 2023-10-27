@@ -1,0 +1,7 @@
+<app-grid gridTemplateColumns="15fr 1fr 10fr">
+  <app-left />
+
+  <section class="line"></section>
+  <p *ngIf="!selectedContact">no selected contact!</p>
+  <app-right *ngIf="selectedContact" [contact]="selectedContact" />
+</app-grid>

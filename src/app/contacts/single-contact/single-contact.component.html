@@ -1,0 +1,10 @@
+<div (click)="clickContactHandle()">
+  <app-flexbox>
+    <h1>name: {{ contact.name }}</h1>
+    <h1>age: {{ contact.age }}</h1>
+    <h3>{{ contact.status }}</h3>
+    <button *ngIf="removeble" (click)="removeHandle($event)" style="align-self: start">
+      remove
+    </button>
+  </app-flexbox>
+</div>

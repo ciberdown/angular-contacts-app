@@ -1,0 +1,15 @@
+div {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px grey;
+  &:hover {
+    transform: translate(1px, 1px);
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.047);
+  }
+}
+button {
+  cursor: pointer;
+}

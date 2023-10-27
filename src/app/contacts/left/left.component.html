@@ -1,0 +1,6 @@
+<app-grid>
+  <app-single-contact
+    *ngFor="let contact of contactsSerivce.contacts; let i = index"
+    [contact]="contact"
+  />
+</app-grid>

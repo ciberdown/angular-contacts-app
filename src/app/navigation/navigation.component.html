@@ -1,23 +1,11 @@
-<div>
+<app-flexbox justifyContent="start" gap="30px">
   <button
-    [routerLinkActiveOptions]="{ exact: true }"
-    routerLinkActive="active"
     routerLink="/"
-  >
-    Home
-  </button>
-  <button
     routerLinkActive="active"
-    routerLink="/contacts"
+    [routerLinkActiveOptions]="{ exact: true }"
   >
-    Contacts
+    home
   </button>
-  <button
-    routerLinkActive="active"
-    routerLink="/info"
-  >
-    info
-  </button>
-  <hr />
-  <router-outlet></router-outlet>
-</div>
+  <button routerLink="/contacts" routerLinkActive="active">contacts</button>
+  <button routerLink="/info" routerLinkActive="active">info</button>
+</app-flexbox>

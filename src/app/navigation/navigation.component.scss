@@ -1,28 +1,21 @@
-$border-color: rgba(0, 0, 0, 0.413);
-$active-color: antiquewhite;
 button {
-  box-sizing: border-box;
-  cursor: pointer;
-  border: none;
-  background-color: $active-color;
+  background-color: rgba(128, 128, 128, 0.226);
   padding: 10px;
-  margin: 5px;
-  margin-bottom: -9px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(128, 128, 128, 0.522);
+  cursor: pointer;
   &:hover {
-    transform: translate(-2px, -2px);
-    border-bottom: 2px solid $active-color;
+    transform: translate(1px, 1px);
+    box-shadow: none;
   }
 }
 
 .active {
-  border-top: $border-color 3px solid;
-  border-left: $border-color 3px solid;
-  border-right: $border-color 3px solid;
-  border-bottom: 1px solid $active-color;
-  &:hover {
-    transform: translate(0, 00);
-  }
+  transform: translate(1px, 1px);
+  box-shadow: none;
+  color: rgb(179, 179, 179);
 }
